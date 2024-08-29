@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সাবমিশন পেজ</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle, #ff007f, #2c3e50);
+            animation: bgAnimation 10s linear infinite;
+            background-size: auto;
+        }
+
+        @keyframes bgAnimation {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto; /* Margin কমানো হয়েছে */
+            padding: 20px; /* Padding কমানো হয়েছে */
+            background: #e9ecef;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #343a40;
+            font-size: 2.2em; /* Font size একটু ছোট করা হয়েছে */
+            margin: 10px 0; /* Margin কমানো হয়েছে */
+        }
+
+        h2 {
+            text-align: center;
+            color: #343a40;
+            font-size: 1.5em; /* Font size একটু ছোট করা হয়েছে */
+            margin: 8px 0; /* Margin কমানো হয়েছে */
+        }
+
+        h3 {
+            text-align: center;
+            color: #343a40;
+            font-size: 1.3em; /* Font size একটু ছোট করা হয়েছে */
+            margin: 8px 0; /* Margin কমানো হয়েছে */
+        }
+
+        p {
+            text-align: center;
+            color: #343a40;
+            font-size: 1.3em; /* Font size একটু ছোট করা হয়েছে */
+            line-height: 1.4; /* লাইন হাইট কমানো হয়েছে */
+            margin: 8px 0; /* Margin কমানো হয়েছে */
+        }
+
+        .generated-id-box {
+            text-align: center;
+            padding: 15px; /* Padding কমানো হয়েছে */
+            margin: 10px 10px 80px 10px; /* Margin কমানো হয়েছে */
+            background: linear-gradient(135deg, #ffeb3b, #f44336);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            color: #000;
+            font-size: 1.3em; /* Font size একটু ছোট করা হয়েছে */
+            font-weight: bold;
+            animation: lighting 1s infinite alternate;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .generated-id-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(45deg);
+            animation: shine 3s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes lighting {
+            0% {
+                box-shadow: 0 0 20px rgba(255, 235, 59, 0.8);
+            }
+            100% {
+                box-shadow: 0 0 40px rgba(255, 87, 34, 1);
+            }
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translate(-50%, -50%) rotate(45deg) translateX(0);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(45deg) translateX(100%);
+            }
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* Gap কমানো হয়েছে */
+            justify-content: center;
+            margin-top: 20px; /* Margin কমানো হয়েছে */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px; /* Padding কমানো হয়েছে */
+            font-size: 0.9em; /* Font size একটু ছোট করা হয়েছে */
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .social-media {
+            text-align: center;
+            margin-top: 10px; /* Margin কমানো হয়েছে */
+        }
+
+        .social-media a {
+            display: inline-block;
+            margin: 0 10px; /* Margin কমানো হয়েছে */
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px; /* Padding কমানো হয়েছে */
+            border-radius: 50%;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            font-size: 1.3em; /* Font size একটু ছোট করা হয়েছে */
+        }
+
+        .social-media a.facebook {
+            background-color: #3b5998;
+        }
+
+        .social-media a.twitter {
+            background-color: #1da1f2;
+        }
+
+        .social-media a.linkedin {
+            background-color: #0077b5;
+        }
+
+        .social-media a.youtube {
+            background-color: #ff0000;
+        }
+
+        .social-media a.pinterest {
+            background-color: #bd081c;
+        }
+
+        .social-media a.email {
+            background-color: #007bff;
+        }
+
+        .social-media a:hover {
+            animation: colorChange 1s ease-in-out;
+        }
+
+        @keyframes colorChange {
+            0% {
+                transform: scale(1);
+                background-color: inherit;
+            }
+            50% {
+                transform: scale(1.1);
+                background-color: #ffffff;
+                color: #000000;
+            }
+            100% {
+                transform: scale(1);
+                background-color: inherit;
+                color: #ffffff;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .button {
+                font-size: 0.8em; /* Font size একটু ছোট করা হয়েছে */
+                padding: 8px 15px; /* Padding কমানো হয়েছে */
+            }
+
+            .social-media a {
+                font-size: 1em; /* Font size একটু ছোট করা হয়েছে */
+                padding: 8px; /* Padding কমানো হয়েছে */
+            }
+        }
+    </style>
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>আপনার ডাটা সাবমিট করা হইছে</h1>
+        <h2>ধন্যবাদ আপনাকে!</h2>
+        <div class="generated-id-box">
+            <p>আপনার ডাটা আইডি: <span id="generatedId"></span></p>
+           
+        </div>
+        <p>
+         আামাদের মাধ্যমে সকল ধরনের অনলাইন সেবা পাওয়ার জন্য উপরের "ID" টা সংগ্রহ করে রাখেন। আপনি নিচের বাটনগুলো ব্যবহার করে অন্যান্য ফর্মে রিডাইরেক্ট করতে পারেন অথবা আমাদের সাথে যোগাযোগ করতে পারেন।
+        </p>
+        <div class="buttons">
+            <a href="https://69a29d85-528b-4c9e-bc47-e4ba7ae3a7a3-00-1x6axok6pco9a.pike.replit.dev/" class="button">ফর্ম ১</a>
+            <a href="https://example.com/form2" class="button">ফর্ম ২</a>
+            <a href="https://example.com/form3" class="button">ফর্ম ৩</a>
+            <a href="https://example.com/form4" class="button">ফর্ম ৪</a>
+        </div>
+        <h3>আমাদের সাথে ফলো করুন:</h3>
+        <div class="social-media">
+            <a href="https://www.facebook.com/ictmunnabd" class="facebook" target="_blank" title="Facebook">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com/ictmunna" class="twitter" target="_blank" title="Twitter">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ictmunna/" class="linkedin" target="_blank" title="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/@munna22022" class="youtube" target="_blank" title="YouTube">
+                <i class="bi bi-youtube"></i>
+            </a>
+            <a href="https://www.pinterest.com/ictmunna/" class="pinterest" target="_blank" title="Pinterest">
+                <i class="bi bi-pinterest"></i>
+            </a>
+            <a href="mailto:munnaislam22022@gmail.com" class="email" target="_blank" title="Email">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+    </div>
+    <script>
+        // পেজ লোড হওয়ার পর স্থানীয় স্টোরেজ থেকে ID গ্রহণ করুন এবং প্রদর্শন করুন
+        window.onload = function() {
+            var id = localStorage.getItem('submittedId');  // স্থানীয় স্টোরেজ থেকে ID উদ্ধার করুন
+            document.getElementById('generatedId').textContent = id ? id : "ID পাওয়া যায়নি";  // ID প্রদর্শন করুন
+        };
+    </script>
+    
+</html>

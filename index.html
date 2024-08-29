@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>চাকরির আবেদন ফরম</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+  
+  <body>
+    
+    <header>
+      <div class="header-container">
+        <div class="action-barA">
+          <input type="text" id="search_id" name="search_id" placeholder="আইডি বা নম্বর" class="search-input">
+          <button type="button" onclick="searchID()" class="action-button">সার্চ করুন</button>
+          </div>
+      </div>
+    </header>
+    
+
+    <div class="container">
+      <form id="Form" method="post" action="https://script.google.com/macros/s/AKfycbzOrU-lC6D6NZ_ALzK82eD8g2zrtIlZajUv1ateZm6bBkAy9m0fQUBYSLRXEMOL3geb/exec"
+      onsubmit="return handleSubmit(event)">
+        <input type="hidden" name="sheetName" value="All From">
+
+
+        
+                  <h1> রেজিষ্টার ফরম </h1>
+        <div class="action-barB">
+          <button type="button" onclick="newForm()" class="action-button">নতুন ফরম</button>
+          <button type="button" onclick="editForm()" class="action-button">এডিট</button>
+        </div>
+        
+
+      <div class="form-group">
+        <label for="applicant_bangla">আবেদনকারীর নাম (বাংলায়):</label>
+        <input type="text" id="applicant_bangla" name="Name Bangla">
+      </div>
+
+      <div class="form-group">
+        <label for="applicant_english">আবেদনকারীর নাম (ইংরেজীতে):</label>
+        <input type="text" id="applicant_english" name="Name English">
+      </div>
+
+      <div class="form-group">
+        <label for="father_name_bangla">পিতার নাম (বাংলায়):</label>
+        <input type="text" id="father_name_bangla" name="Father Name Bangla">
+      </div>
+
+      <div class="form-group">
+        <label for="father_name_english">পিতার নাম (ইংরেজীতে):</label>
+        <input type="text" id="father_name_english" name="Father Name English">
+      </div>
+
+      <div class="form-group">
+        <label for="mother_name_bangla">মায়ের নাম (বাংলায়):</label>
+        <input type="text" id="mother_name_bangla" name="Mother Name Bangla">
+      </div>
+
+      <div class="form-group">
+        <label for="mother_name_english">মায়ের নাম (ইংরেজীতে):</label>
+        <input type="text" id="mother_name_english" name="Mother Name English">
+      </div>
+
+      <div class="form-group">
+        <label for="birthdate">জন্ম তারিখ:</label>
+        <input type="date" id="date_of_birth" name="Date of Birth">
+      </div>
+
+      <div class="form-group">
+        <label for="nationality">জাতীয়তা:</label>
+        <input type="text" id="nationality" name="Nationality">
+      </div>
+
+      <div class="form-group">
+        <label for="religion">ধর্ম:</label>
+        <select id="religion" name="Religion">
+          <option value="">-- নির্বাচন করুন --</option>
+          <option value="ইসলাম">ইসলাম</option>
+          <option value="হিন্দু">হিন্দু</option>
+          <option value="খ্রিষ্টান">খ্রিষ্টান</option>
+          <option value="অন্যান্য">অন্যান্য</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">লিঙ্গ:</label>
+        <select id="gender" name="Gender">
+          <option value="">-- নির্বাচন করুন --</option>
+          <option value="পুরুষ">পুরুষ</option>
+          <option value="মহিলা">মহিলা</option>
+          <option value="অন্যান্য">অন্যান্য</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="nid_number">জাতীয় পরিচয় নম্বর:</label>
+        <input type="text" id="nid_number" name="NID Number">
+      </div>
+
+      <div class="form-group">
+        <label for="birth_registration_number">জন্মনিবন্ধন নাম্বার:</label>
+        <input type="text" id="birth_registration_number" name="Birth Registration Number">
+      </div>
+
+      <div class="form-group">
+        <label for="marital_status">বৈবাহিক অবস্থা:</label>
+        <select id="marital_status" name="Marital Status">
+          <option value="">-- নির্বাচন করুন --</option>
+          <option value="বিবাহিত">বিবাহিত</option>
+          <option value="অবিবাহিত">অবিবাহিত</option>
+          <option value="অন্যান্য">অন্যান্য</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">মোবাইল নম্বর:</label>
+        <input type="text" id="contact" name="Contact">
+      </div>
+
+      <div class="form-group">
+        <label for="email">ই-মেইল (যদি থাকে):</label>
+        <input type="email" id="email" name="Email" placeholder="example@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="quota">কোটা (যদি থাকে):</label>
+        <select id="quota" name="Quota">
+          <option value="">-- নির্বাচন করুন --</option>
+          <option value="মুক্তিযুদ্ধ">মুক্তিযুদ্ধ কোঠা</option>
+          <option value="প্রতিবন্ধী">প্রতিবন্ধী কোঠা</option>
+          <option value="অন্যান্য">অন্যান্য কোঠা</option>
+        </select>
+      </div>
+
+
+      <!-- বর্তমান ঠিকানা -->
+      <div class="form-group address-section">
+        <label>বর্তমান ঠিকানা:</label>
+        <div class="address-group">
+          <input type="text" id="current_address"     name="Current Address" placeholder="বাসা ও সড়ক (নাম ও নম্বর)">
+          <input type="text" id="current_village"     name="Current Village" placeholder="গ্রাম/পাড়া/মহল্লা">
+          <input type="text" id="current_union"       name="Current Union" placeholder="ইউনিয়ন/ওয়ার্ড নং">
+          <input type="text" id="current_post_office" name="Current Post Office" placeholder="ডাকঘর">
+          <input type="text" id="current_postcode"    name="Current Postcode" placeholder="পোস্ট কোড নম্বর">
+          <input type="text" id="current_upazila"     name="Current Upazila" placeholder="উপজেলা">
+          <input type="text" id="current_district"    name="Current District" placeholder="জেলা">
+          <input type="text" id="current_division"    name="Current Division" placeholder="বিভাগ">
+        </div>
+      </div>
+
+      <!-- স্থায়ী ঠিকানা -->
+      <div class="form-group address-section">
+        <label>স্থায়ী ঠিকানা:</label>
+        <div class="address-group">
+          <input type="text" id="permanent_address"   name="Permanent Address" placeholder="বাসা ও সড়ক (নাম ও নম্বর)">
+          <input type="text" id="permanent_village"   name="Permanent Village" placeholder="গ্রাম/পাড়া/মহল্লা">
+          <input type="text" id="permanent_union"     name="Permanent Union" placeholder="ইউনিয়ন/ওয়ার্ড নং">
+          <input type="text" id="permanent_post_office" name="Permanent Post Office" placeholder="ডাকঘর">
+          <input type="text" id="permanent_postcode" name="Permanent Postcode" placeholder="পোস্ট কোড নম্বর">
+          <input type="text" id="permanent_upazila" name="Permanent Upazila" placeholder="উপজেলা">
+          <input type="text" id="permanent_district" name="Permanent District" placeholder="জেলা">
+          <input type="text" id="permanent_division" name="Permanent Division" placeholder="বিভাগ">
+        </div>
+      </div>
+
+      <!-- নতুন শিক্ষাগত যোগ্যতা সেকশন -->
+        <!-- নতুন শিক্ষাগত যোগ্যতা সেকশন -->
+        <div class="form-group education-section">
+          <label for="education">শিক্ষাগত যোগ্যতা:</label>   
+          <div class="education-group">
+            <div class="form-group">
+              <label for="SSC_Lavel">SSC Lavel</label>
+              <select id="ssc_lavel" name="SSC Lavel">
+                <option value="">Select Examination</option>
+                <option value="S.S.C">S.S.C</option>
+                <option value="Dakhil">Dakhil</option>
+                <option value="S.S.C Vocational">S.S.C Vocational</option>
+                <option value="O Level/Cambridge">O Level/Cambridge</option>
+                <option value="S.S.C Equivalent">S.S.C Equivalent</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="Board_SSC">Board SSC</label>
+              <select id="board_ssc" name="Board SSC">
+                <option value="">Select Board</option>
+                <option value="Dhaka">Dhaka</option>
+                <option value="Comilla">Comilla</option>
+                <option value="Rajshahi">Rajshahi</option>
+                <option value="Jessore">Jessore</option>
+                <option value="Chittagong">Chittagong</option>
+                <option value="Barisal">Barisal</option>
+                <option value="Sylhet">Sylhet</option>
+                <option value="Dinajpur">Dinajpur</option>
+                <option value="Madrasah">Madrasah</option>
+                <option value="Technical">Technical</option>
+                <option value="Mymensingh">Mymensingh</option>
+                <option value="Cambridge International - IGCE">Cambridge International - IGCE</option>
+                <option value="Edexcel International">Edexcel International</option>
+                <option value="Open University">Open University</option>
+                <option value="MATS">MATS</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="Roll_SSC">Roll SSC</label>
+              <input type="text" id="roll_ssc" name="Roll SSC" placeholder="Enter SSC Roll Number">
+            </div>
+            <div class="form-group">
+              <label for="Reg_SSC">Registration SSC</label>
+              <input type="text" id="reg_ssc" name="Registration SSC" placeholder="Enter SSC Registration Number">
+            </div>
+            <div class="form-group">
+                <label for="Result_SSC">Result SSC</label>
+                <input type="text" id="result_ssc" name="Result SSC" placeholder="Enter SSC Result">
+            </div>
+            <div class="form-group">
+              <label for="Group_SSC">Group SSC</label>
+              <select id="group_ssc" name="Group SSC">
+                <option value="">Select Group</option>
+                <option value="Science">Science</option>
+                <option value="Humanities">Humanities</option>
+                <option value="Business Studies">Business Studies</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="Passing_Year_SSC">Passing Year SSC</label>
+              <input type="text" id="passing_year_ssc" name="Passing Year SSC" placeholder="Enter Passing Year">
+            </div>
+          </div>
+          <div class="education-group">
+            <div class="form-group">
+                <label for="HSC_Lavel">HSC Level</label>
+                <select id="hsc_lavel" name="HSC Lavel">
+                    <option value="">Select Examination</option>
+                    <option value="H.S.C">H.S.C</option>
+                    <option value="Alim">Alim</option>
+                    <option value="Business Management">Business Management</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="A Level/Sr. Cambridge">A Level/Sr. Cambridge</option>
+                    <option value="H.S.C Equivalent">H.S.C Equivalent</option>
+                    <option value="Diploma (Nursing/Midwifery)">Diploma (Nursing/Midwifery)</option>
+                    <option value="Diploma from MATS">Diploma from MATS</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="Board_HSC">Board HSC</label>
+              <select id="board_hsc" name="Board HSC">
+                <option value="">Select Board</option>
+                <option value="Dhaka">Dhaka</option>
+                <option value="Comilla">Comilla</option>
+                <option value="Rajshahi">Rajshahi</option>
+                <option value="Jessore">Jessore</option>
+                <option value="Chittagong">Chittagong</option>
+                <option value="Barisal">Barisal</option>
+                <option value="Sylhet">Sylhet</option>
+                <option value="Dinajpur">Dinajpur</option>
+                <option value="Madrasah">Madrasah</option>
+                <option value="Technical">Technical</option>
+                <option value="Mymensingh">Mymensingh</option>
+                <option value="Cambridge International - IGCE">Cambridge International - IGCE</option>
+                <option value="Edexcel International">Edexcel International</option>
+                <option value="Open University">Open University</option>
+                <option value="MATS">MATS</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="Roll_HSC">Roll HSC</label>
+              <input type="text" id="roll_hsc" name="Roll HSC" placeholder="Enter HSC Roll Number">
+            </div>
+            <div class="form-group">
+              <label for="Reg_HSC">Registration HSC</label>
+              <input type="text" id="reg_hsc" name="Registration HSC" placeholder="Enter HSC Registration Number">
+            </div>
+            <div class="form-group">
+              <label for="Result_HSC">Result HSC</label>
+              <input type="text" id="result_hsc" name="Result HSC" placeholder="Enter HSC Result">
+            </div>
+            <div class="form-group">
+                <label for="Group_HSC">Group HSC</label>
+                <select id="group_hsc" name="Group HSC">
+                    <option value="">Select Group</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="Passing_Year_HSC">Passing Year HSC</label>
+              <input type="text" id="passing_year_hsc" name="Passing Year HSC" placeholder="Enter Passing Year">
+            </div>
+          </div>
+          <div class="education-group">
+            <div class="form-group">
+                <label for="Graduation_Level">Graduation Level</label>
+                <select id="graduation_level" name="Graduation Level">
+                    <option value="">Select Graduation Level</option>
+                    <option value="B.A.">Bachelor of Arts (B.A.)</option>
+                    <option value="B.Sc.">Bachelor of Science (B.Sc.)</option>
+                    <option value="B.Com.">Bachelor of Commerce (B.Com.)</option>
+                    <option value="BBA">Bachelor of Business Administration (BBA)</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Law">Law</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Medical">Medical</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Degree_Graduation">Degree/Subject</label>
+                <select id="degree_graduation" name="Degree Graduation">
+                    <option value="">Select Degree/Subject</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="University_Graduation">University/Institute</label>
+                <input type="text" id="university_graduation" name="University Graduation" placeholder="Enter University or Institute Name">
+            </div>
+            <div class="form-group">
+                <label for="Course_Duration_Graduation">Course Duration</label>
+                <input type="text" id="course_duration_graduation" name="Course Duration Graduation" placeholder="Enter Course Duration">
+            </div>
+            <div class="form-group">
+              <label for="Result_Graduation">Result Graduation</label>
+              <input type="text" id="result_graduation" name="Result Graduation" placeholder="Enter Graduation Result">
+            </div>
+            <div class="form-group">
+                <label for="Passing_Year_Graduation">Passing Year</label>
+                <input type="text" id="passing_year_graduation" name="Passing Year Graduation" placeholder="Enter Passing Year">
+            </div>
+          </div>
+          <div class="education-group">
+            <div class="form-group">
+                <label for="Master_Level">Master Level</label>
+                <select id="master_level" name="Master Level">
+                    <option value="">Select Master Level</option>
+                    <option value="M.A.">Master of Arts (M.A.)</option>
+                    <option value="M.Sc.">Master of Science (M.Sc.)</option>
+                    <option value="M.Com.">Master of Commerce (M.Com.)</option>
+                    <option value="MBA">Master of Business Administration (MBA)</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Law">Law</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Medical">Medical</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Degree_Master">Degree/Subject</label>
+                <select id="degree_master" name="Degree Master">
+                    <option value="">Select Degree/Subject</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="University_Master">University/Institute</label>
+                <input type="text" id="university_master" name="University Master" placeholder="Enter University or Institute Name">
+            </div>
+            <div class="form-group">
+                <label for="Course_Duration_Master">Course Duration</label>
+                <input type="text" id="course_duration_master" name="Course Duration Master" placeholder="Enter Course Duration">
+            </div>
+            <div class="form-group">
+              <label for="Result_Master">Result</label>
+              <input type="text" id="result_master" name="Result Master" placeholder="Enter Result">
+            </div>
+            <div class="form-group">
+                <label for="Passing_Year_Master">Passing Year</label>
+                <input type="text" id="passing_year_master" name="Passing Year Master" placeholder="Enter Passing Year">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <button type="submit">জমা দিন</button>
+          <div id="message" class="hidden"></div>
+        </div>
+
+        </div>
+      
+      </form>
+
+      
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading-overlay hidden">
+        <div class="spinner"></div>
+    </div>   
+    <div id="message" class="hidden"></div>
+    
+  </div>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 আপনার কোম্পানির নাম। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </footer>
+    <script>
+      
+    </script>
+  <script src="script/edit.js"></script>
+  <script src="script/education.js"></script>
+  <script src="script/frome.js"></script>
+  <script src="script/search.js"></script>   
+</body>
+ 
+</html>

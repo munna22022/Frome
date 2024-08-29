@@ -1,0 +1,374 @@
+body {
+   font-family: 'Arial', sans-serif;
+   background-color: #bbff00;
+   margin: 10px;
+   padding: 10px;
+   display: ;
+   justify-content: center;
+   align-items: center;
+   height: auto;
+ }
+
+ .container {
+ background: #5df9d2;
+ padding: 50px;
+ border-radius: 10px;
+ box-shadow:;
+ width: %;
+ max-width: 1200px;
+ margin: 0 auto;
+ text-align: left;
+ }
+
+
+ .header-container {
+   background: #5df9d2;
+   padding: 50px;
+   border-radius: 10px;
+   box-shadow:;
+   width: %;
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: left;
+ }
+
+ .action-barA {
+   display: flex;
+   align-items: center;
+   gap: 15px; /* বাটনগুলির মধ্যে একটু বেশি ফাঁকা জায়গা দিতে পারেন */
+   padding: 10px 20px; /* কিছু প্যাডিং যুক্ত করুন */
+   background-color: #f4f4f4; /* হালকা পটভূমির রঙ */
+   border-radius: 8px; /* কোণার আধুনিক দেখানোর জন্য */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* হালকা শ্যাডো */
+ }
+
+ .action-barA input[type="text"] {
+   flex: 1;
+   padding: 10px;
+   font-size: 16px;
+   border: none;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .action-barA button[type="button"] {
+   margin-left: 10px;
+   padding: 10px 20px;
+   font-size: 16px;
+   border: none;
+   border-radius: 5px;
+   background-color: #4CAF50;
+   color: #fff;
+   cursor: pointer;
+ }
+
+ .action-barA button[type="button"]:hover {
+   background-color: #3e8e41;
+ }
+
+ 
+
+ h1 {
+ text-align: center;
+ margin-bottom: 0px; /* নিচে ব্যবধান কমানো হয়েছে */
+ font-size: 48px; /* বড় ফন্ট সাইজ */
+ color: #ff5722; /* কমলা রঙের টেক্সট */
+ padding: 0px; /* প্যাডিং বৃদ্ধি করা হয়েছে */
+ font-family: 'Verdana', sans-serif; /* সুন্দর ফন্ট ফ্যামিলি */
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   gap: 10px;
+   grid-column: span 4;
+ }
+
+.action-barB {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 48px;
+  color: #ff5722;
+  padding: 0px;
+  font-family: 'Verdana', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-column: span 4;
+  align-content: center;
+  justify-content: space-around;
+  justify-items: stretch;
+}
+
+.action-barB button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.action-barB button:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.action-barB button:active {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371); /* Darker gradient when button is pressed */
+  transform: scale(0.95); /* Slightly shrink the button when pressed */
+}
+
+
+.form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+.readonly-field {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+.edit-button, .search-button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+.edit-button {
+  background-color: #4CAF50;
+}
+.search-button {
+  background-color: #2196F3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button[type="submit"] {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #4CAF50, #2C6B2F); /* গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #2C6B2F, #4CAF50); /* হোভার অবস্থায় গ্রেডিয়েন্ট বিপরীত রঙ */
+  transform: scale(1.05); /* হোভার করার সময় সামান্য বড় হবে */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
+}
+
+button[type="submit"]:active {
+  background: linear-gradient(135deg, #2C6B2F, #4CAF50); /* চাপার সময় একই রঙে থাকবে */
+  transform: scale(0.95); /* চাপার সময় সামান্য ছোট হবে */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* চাপার সময় কম শ্যাডো */
+}
+
+
+
+
+ form {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+ }
+
+ .form-group {
+   display: flex;
+   flex-direction: column;
+   grid-column: span 1;
+   align-items: flex-start;
+   justify-content: center;
+   align-content: center;
+   flex-wrap: nowrap;
+ }
+
+ label {
+   margin-bottom: 2px;
+   font-weight: bold;
+   color: #000000;
+ }
+
+ /* সাধারণ ইনপুট ফিল্ড স্টাইলিং */
+ input[type="text"], input[type="email"], input[type="date"], textarea, select {
+     width: 100%;
+     padding: 10px;
+     text-align: left;
+     border: 1px solid #ff0000;
+     border-radius: 5px;
+     box-sizing: border-box;
+     font-size: 16px;
+     margin-top: 5px;
+    transition: background-color 0.001s ease; /* কালার পরিবর্তনের জন্য ট্রানজিশন */
+ }
+
+ /* ইনপুট ফিল্ডে লেখা থাকলে ব্যাকগ্রাউন্ড কালার পরিবর্তন হবে */
+ input[type="text"]:valid, 
+ input[type="email"]:valid, 
+ input[type="date"]:valid, 
+ textarea:valid, 
+ select:valid {
+   background-color: #ffffff; /* লাইট ব্লু ব্যাকগ্রাউন্ড */
+ }
+
+ /* ইনপুট ফিল্ড ফোকাস করার সময় ব্যাকগ্রাউন্ড কালার পরিবর্তন হবে */
+ input[type="text"]:focus, 
+ input[type="email"]:focus, 
+ input[type="date"]:focus, 
+ textarea:focus, 
+ select:focus {
+   background-color: #73f282; /* হালকা নীল ব্যাকগ্রাউন্ড */
+   border-color: #4a90e2; /* ফোকাসের সময় বর্ডারের রঙ পরিবর্তন */
+ }
+
+
+ textarea {
+   resize: vertical;
+   height: 80px;
+ }
+
+ input[type="radio"] {
+   margin-right: 10px;
+   background-color: #ff0000;
+ }
+
+ input[type="radio"]+label {
+   display: inline-block;
+   margin-right: 15px;
+ }
+ 
+
+ .address-group {
+   display: grid;
+   grid-template-columns: repeat(3, 2fr);
+   gap: 10px;
+   grid-column: span 2;
+ }
+
+ .address-section {
+   grid-column: span 2;
+ }
+
+ .address-sections {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   grid-column: span 4;
+ }
+
+ .education-section {
+   grid-column: span 4;
+ }
+
+ .education-group {
+   display: grid;
+   grid-template-columns: repeat(7, 1fr);
+   gap: 10px;
+   margin-bottom: 10px;
+   align-items: start;
+ }
+
+
+
+
+
+
+
+ .education-group input,
+ .education-group select {
+   margin-bottom: 0px;
+ }
+
+ .education-group button,
+ .education-group .remove-education {
+   grid-column: span 1;
+   margin-top: 28px;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   background-color: #007bff;
+   color: #fff;
+   cursor: pointer;
+ }
+
+ @media (max-width: 600px) {
+   .container {
+     width: 95%;
+     padding: 15px;
+   }
+
+   label {
+     font-size: 14px;
+   }
+
+   input[type="text"],
+   input[type="date"],
+   input[type="email"],
+   textarea,
+   select {
+     font-size: 14px;
+     padding: 0px;
+   }
+
+ 
+
+  
+ }
+
+
+
+
+ /* Loading overlay */
+ .loading-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 9999; /* Ensure it covers the whole page */
+ }
+
+ /* Hidden by default */
+ .hidden {
+     display: none;
+ }
+
+ /* Spinner style */
+ .spinner {
+     border: 8px solid rgba(0, 0, 0, 0.1); /* Light grey */
+     border-left: 8px solid #3498db; /* Blue */
+     border-radius: 50%;
+     width: 50px;
+     height: 50px;
+     animation: spin 1s linear infinite;
+ }
+
+ /* Spinner animation */
+ @keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+ }
+
+
